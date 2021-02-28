@@ -42,7 +42,7 @@ a[href]:visited {
 }
 main {
   margin: auto;
-  max-width: 60%;
+  max-width: 80%;
   padding: 1rem;
 }
 main :first-child {

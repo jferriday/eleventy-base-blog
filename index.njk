@@ -4,18 +4,20 @@ eleventyNavigation:
   key: Home
   order: 1
 ---
+<div class="m-3 p-3">
+  <h1>Portfolio</h1>
+  <p>Hi, I'm Josh Ferriday. I'm a JAMStack developer based in Leeds. This site is a place to publish my projects and comments on learning
+  web development using JavaScript, APIs and Markdown.</P>
+  <br>
+  <p>You can read more about me <a href="/about/">here</a> or see my work in the <a href="/posts/">archive</a>.</p>
+</div>
+<div class="container-sm bg-light p-3 m-3 bg-gradient rounded shadow-sm">
+  {% set maxPosts = collections.posts.length | min(3) %}
+  <h2>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</h2>
 
-<h1>Portfolio</h1>
-<p>Hi, I'm Josh Ferriday. I'm a JAMStack developer based in Leeds. This site is a place to publish my projects and comments on learning
-web development using JavaScript, APIs and Markdown.</P>
-<br>
-<p>You can read more about me <a href="/about/">here</a> or see my work in the <a href="/posts/">archive</a>.</p>
+  {% set postslist = collections.posts | head(-3) %}
+  {% set postslistCounter = collections.posts | length %}
+  {% include "postslist.njk" %}
 
-{% set maxPosts = collections.posts.length | min(3) %}
-<h2>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</h2>
-
-{% set postslist = collections.posts | head(-3) %}
-{% set postslistCounter = collections.posts | length %}
-{% include "postslist.njk" %}
-
-<p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+  <p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+</div>

@@ -30,14 +30,16 @@
       </nav>
     </header>
 
-    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+    <main{% if templateClass %} class="{{ templateClass }}"{% endif %} >
 
   
 
       {{ content | safe }}
     </main>
 
-    <footer></footer>
+    <footer class="bg-dark h-25 position-fixed bottom-0" >
+      <br>
+    </footer>
 
     <!-- Current page: {{ page.url | url }} -->
     <script src="{{ '/css/bootstrap-5.0.0/js/bootstrap.js' }}"></script>
