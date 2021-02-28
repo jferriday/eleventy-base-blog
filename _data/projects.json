@@ -1,0 +1,8 @@
+[
+    {
+        "name": "Spare My food",
+        "url" : "https://jferriday.github.io/spare-my-food/",
+        "img" : "https://jferriday.github.io/project-info/spare-my-food-screen.png",
+        "shortDesc":" A simple web-based tool to search for nearby food banks, returning items they need and contact details. The tool makes use of the Give Food API."
+    }
+]

@@ -1,0 +1,18 @@
+---
+layout: layouts/project-cards.njk
+eleventyNavigation:
+  key: Projects
+  order: 4
+---
+
+{% for project in projects %}
+<div class="card" style="widthL 18rem">
+    <img src={{project.img}} class="card-img-top" alt="project screenshot">
+    <div class="card-body">
+        <h5 class="card-title">{{project.name}}</h5>
+        <p class="card-text">{{project.shortDesc}}</p>
+        <a href={{project.url}} class="btn btn-primary">Check it out</a>
+    </div>
+</div>
+    
+{% endfor %}

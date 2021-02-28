@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or metadata.title }}</title>
+    <meta name="description" content="{{ description or metadata.description }}">
+    <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/bootstrap-5.0.0/css/bootstrap.css' }}">
+    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+    <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+        <div class="container-fluid">
+          <a class="navbar-brand" style="color: white" href="{{ '/' | url }}">{{ metadata.title }}</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end px-3" id="navbar">
+            {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 justify-content-center">
+            {%- for entry in collections.all | eleventyNavigation %}
+              <li class="nav-item {% if entry.url == page.url %} active{% endif %}"><a class="nav-link" href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+            {%- endfor %}
+            </ul>
+          </div>
+      </nav>
+    </header>
+
+    <main>
+    <h1>Projects</h1>
+    <br>
+    
+   {{ content | safe }}
+    
+    </main>
+
+    <footer></footer>
+
+    <!-- Current page: {{ page.url | url }} -->
+    <script src="{{ '/css/bootstrap-5.0.0/js/bootstrap.js' }}"></script>
+  </body>
+</html>
