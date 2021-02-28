@@ -21,6 +21,8 @@ body {
   background-color: var(--white);
   
 }
+
+
 p:last-child {
   margin-bottom: 0;
 }
@@ -130,7 +132,7 @@ pre {
   text-decoration: none;
 }
 
-/* Nav */
+/* Nav
 .nav {
   padding: 0;
   list-style: none;
@@ -147,7 +149,7 @@ pre {
 .nav-item-active {
   font-weight: 700;
   text-decoration: underline;
-}
+} */
 
 /* Posts list */
 .postlist {

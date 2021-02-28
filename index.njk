@@ -5,8 +5,14 @@ eleventyNavigation:
   order: 1
 ---
 
+<h1>Portfolio</h1>
+<p>Hi, I'm Josh Ferriday. I'm a JAMStack developer based in Leeds. This site is a place to publish my projects and comments on learning
+web development using JavaScript, APIs and Markdown.</P>
+<br>
+<p>You can read more about me <a href="/about/">here</a> or see my work in the <a href="/posts/">archive</a>.</p>
+
 {% set maxPosts = collections.posts.length | min(3) %}
-<h1>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</h1>
+<h2>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</h2>
 
 {% set postslist = collections.posts | head(-3) %}
 {% set postslistCounter = collections.posts | length %}

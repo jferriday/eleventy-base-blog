@@ -2,8 +2,6 @@
 title: React Functions
 description: A quicker way to build components
 
-tags:
-  - another-tag
 layout: layouts/post.njk
 ---
 Over the past couple of weeks I've been getting involved in React. So far, it's been one of those things I've been aware of existing - a word popping up frequently as a requirement in web development. As I've been working through Codecademy's Full Stack Engineer course, I've been peeking at the React section since the start, waiting to delve into the framework when my JavaScript skills were ready for it.
