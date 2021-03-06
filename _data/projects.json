@@ -4,5 +4,16 @@
         "url" : "https://jferriday.github.io/spare-my-food/",
         "img" : "https://jferriday.github.io/project-info/spare-my-food-screen.png",
         "shortDesc":" A simple web-based tool to search for nearby food banks, returning items they need and contact details. The tool makes use of the Give Food API."
+    },
+
+    {
+        "name": "Selecta",
+        "url" : "https://selecta.netlify.app/",
+        "img" : "https://jferriday.github.io/project-info/selecta-screen.png",
+        "shortDesc" : "A mobile and web browser React app which uses the Spotify API, allowing users to search for and add music to a playlist, then save it to their account."
+        
+
     }
+
+    
 ]
