@@ -44,4 +44,4 @@ const tracks = props.tracks
 }
 ```
 
-Now imagine adding state to both of these. Much simpler using functions! It's been a great process learning about hooks. I'm looking forward to discovering the possibilities of functional JavaScript as a continue learning.
+Now imagine adding state to both of these. Much simpler using functions! It's been a great process learning about hooks. I'm looking forward to discovering the possibilities of functional JavaScript as I continue learning.
