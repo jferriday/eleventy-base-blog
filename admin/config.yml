@@ -1,3 +1,17 @@
 backend:
   name: git-gateway
   branch: master
+media_folder: "_site/img/uploads"
+public_folder: "/img/uploads"
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+        - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/blog.njk"} # -** can use blog template alias optionally if you set it up previously
+        - {label: "Title", name: "title", widget: "string"}
+        - {label: "Publish Date", name: "date", widget: "datetime"}
+        - {label: "Featured Image", name: "thumbnail", widget: "image"}
+        - {label: "Body", name: "body", widget: "markdown"}
